@@ -1,25 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Valon DBMS Project</title>
+
+    <!-- Recommended meta tags -->
     <meta charset="UTF-8">
-    <title>Spotify DBMS Project</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <!-- Correct PyScript CDN for 2024+ -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
-    <script defer src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.11.2/core.css">
+
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2025.11.2/core.js"></script>
 </head>
-
 <body>
-    <h1>DBMS Project</h1>
-
-    <p>If PyScript loads correctly, you will see Python output below:</p>
-
-    <pre id="output"></pre>
-
-    <py-script output="output">
-print("Hello from Python on GitHub Pages!")
-x = 3 + 4
-print("3 + 4 =", x)
-    </py-script>
+    <script type="py" src="./main.py" config="./pyscript.toml" terminal></script>
 </body>
 </html>
