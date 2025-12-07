@@ -8,12 +8,7 @@ import js
 
 # Define the functions that are called by the button's 'onclick' handler.
 # These functions MUST be available in the global scope (i.e., not nested inside a class).
-def startup_function():
-    # This import should now succeed
-    output_element = Element('output') 
-    
-    output_element.write("✅ PyScript DOM is working! Run on startup successful.")
-    js.console.log("pyscript.dom check passed.")
+
 def handle_query_1():
     """
     Function to run a specific database query (Query A) and update the HTML.
@@ -45,12 +40,21 @@ def handle_query_2():
     output_element.write("➕ Query B has been executed.")
     js.alert("Query B complete!")
     
-# You can define other utility functions here that are not directly linked to a button
-def setup_application():
-    print("Application initialized. Waiting for button clicks...")
+# # You can define other utility functions here that are not directly linked to a button
+# def setup_application():
+#     print("Application initialized. Waiting for button clicks...")
 
-# Call setup function to run on start
-setup_application()
+# # Call setup function to run on start
+# setup_application()
+
+def startup_function():
+    # This import should now succeed
+    js.window.handle_query_1 = handle_query_1
+    js.window.handle_query_2 = handle_query_2
+    output_element = Element('output') 
+    
+    output_element.write("✅ PyScript DOM is working! Run on startup successful.")
+    js.console.log("pyscript.dom check passed.")
 
 # When PyScript runs, it automatically makes functions defined at the top level
 # (like handle_query_1 and handle_query_2) accessible to the JavaScript environment,
