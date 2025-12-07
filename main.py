@@ -8,7 +8,12 @@ import js
 
 # Define the functions that are called by the button's 'onclick' handler.
 # These functions MUST be available in the global scope (i.e., not nested inside a class).
-
+def startup_function():
+    # This import should now succeed
+    output_element = Element('output') 
+    
+    output_element.write("✅ PyScript DOM is working! Run on startup successful.")
+    js.console.log("pyscript.dom check passed.")
 def handle_query_1():
     """
     Function to run a specific database query (Query A) and update the HTML.

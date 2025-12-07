@@ -16,7 +16,10 @@
 </head>
 <body>
     <!--run this script upon initialization. loads tables into dbms-->
-    <script type="py" src="./first.py"></script>
+    <py-config>
+        run_on_startup: startup_function
+    </py-config>
+    
     <!-- testing gemini code-->
     <h1>Database Operations</h1>
     <button id="button-query-1" onclick="handle_query_1()">Run Query A</button>
